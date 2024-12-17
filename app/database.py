@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 # Database connection details
-DATABASE_URL = "mysql+mysqlconnector://root:@localhost:127.0.0.1/bookdb"
+DATABASE_URL = "mysql+mysqlconnector://root:@127.0.0.1:3306/bookdb"
 
 # Create the engine (responsible for database connection)
 engine = create_engine(DATABASE_URL, echo=True)
