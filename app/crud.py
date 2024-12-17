@@ -1,7 +1,7 @@
 # crud.py
 from sqlalchemy.orm import Session
-from schemas import Book
-from models import BookCreate
+from app.schema import Book
+from app.models import BookCreate
 
 # Create a new book
 def create_book(db: Session, book: BookCreate):
