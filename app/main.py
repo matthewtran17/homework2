@@ -2,7 +2,7 @@
 from fastapi import FastAPI, HTTPException, Depends  
 from sqlalchemy.orm import Session  
 from app.database import SessionLocal, engine  
-from app.schemas import Base  
+from app.schema import Base  
 from app.models import BookCreate, BookRead  
 import app.crud as crud  
 
