@@ -1,1 +1,15 @@
+# database.py
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, declarative_base
 
+# Database connection details
+DATABASE_URL = "mysql+mysqlconnector://username:password@localhost:3306/bookdb"
+
+# Create the engine (responsible for database connection)
+engine = create_engine(DATABASE_URL, echo=True)
+
+# Session for interacting with the database
+SessionLocal = sessionmaker(bind=engine)
+
+# Base class for models
+Base = declarative_base()
